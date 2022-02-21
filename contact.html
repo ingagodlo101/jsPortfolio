@@ -1,12 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+    <title>MyPortfolio/ingagodlo</title>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <style>
         body {
             font-family: Arial, Helvetica, sans-serif;
-            background-color: #04AA6D;
+            background-color: #86aa9fd5;
+        }
+        
+        .navbar {
+            background-color: darkslategray;
+            margin-bottom: 0;
+            border-radius: 0;
         }
         
         * {
@@ -33,14 +44,21 @@
             cursor: pointer;
         }
         
+        .text-alignCenter {
+            padding: 30px;
+            text-align: center;
+            background-color: #bae2c6;
+            color: rgb(12, 1, 1);
+        }
+        
         input[type=submit]:hover {
-            background-color: #45a049;
+            background-color: #78c7a9;
         }
         /* Style the container/contact section */
         
         .container {
             border-radius: 5px;
-            background-color: #f2f2f2;
+            background-color: #f2f2f2a6;
             padding: 10px;
         }
         /* Create two columns that float next to eachother */
@@ -48,8 +66,8 @@
         .column {
             float: left;
             width: 50%;
-            margin-top: 6px;
-            padding: 20px;
+            margin: auto;
+            padding: 80px;
         }
         /* Clear floats after the columns */
         
@@ -67,37 +85,76 @@
                 margin-top: 0;
             }
         }
+        
+        .footer {
+            padding: 10px;
+            text-align: center;
+            background-color: #bae2c6;
+            color: rgb(12, 1, 1);
+        }
     </style>
-</head>
 
-<body>
+    <body>
 
-    <div class="container">
-        <div style="text-align:center">
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+                    <a class="navbar-brand" href="#">My Portfolio</a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="text-alignCenter">
             <h2>Contact Us</h2>
             <p>We will get back to you:</p>
         </div>
-        <div class="row">
-            <div class="column">
-                <form action="/action_page.php">
-                    <label for="fname">First Name</label>
-                    <input type="text" id="fname" name="firstname" placeholder="Your name..">
-                    <label for="lname">Last Name</label>
-                    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-                    <label for="country">Province</label>
-                    <select id="country" name="country">
+
+        <div class="container">
+
+            <div class="row">
+                <div class="column">
+                    <form action="/action_page.php">
+                        <label for="fname">First Name</label>
+                        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                        <label for="lname">Last Name</label>
+                        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                        <label for="country">Province</label>
+                        <select id="country" name="country">
           <option value="wc">Western Cape</option>
           <option value="gauteng">Gauteng</option>
           <option value="KZN">Kwa Zulu Natal</option>
+          <option value="KZN">Eastern cape</option>
+          <option value="KZN">Free State</option>
+          <option value="KZN">Northen Cape</option>
+          <option value="KZN">Mpumalanga</option>
+          <option value="KZN">North West</option>
+          <option value="KZN">Limpopo</option>
         </select>
-                    <label for="subject">Subject</label>
-                    <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
-                    <input type="submit" value="Submit">
-                </form>
+                        <label for="subject">Subject</label>
+                        <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+                        <input type="submit" value="Submit">
+                    </form>
+                </div>
             </div>
         </div>
-    </div>
+        <footer class="footer">
+            <p>Copy right 2022</p>
+        </footer>
 
-</body>
+    </body>
 
 </html>
